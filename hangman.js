@@ -24,7 +24,6 @@ let updatePage = function() {
     
     let clue = document.getElementById("clue");
     clue.textContent = clueString;
-
     let guessArea = document.getElementById("guesses");
     guessArea.textContent = "Guesses: " + guesses;
     let image = document.getElementById("hangmanpic");
@@ -40,5 +39,6 @@ let guessLetter = function() {
     }
     letter = letter.toLowerCase();
     guesses+=letter;
+    input.value = ""; // Clear the input box
     updatePage();
 }
