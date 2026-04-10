@@ -31,10 +31,13 @@ let updatePage = function() {
     if (guessCount <= 0) {
         alert("Game over! The word was " + word);
         newGame();
-    } else if (clueString.indexOf("_") < 0) {
-        alert("Congratulations! You guessed the word!");
-        newGame();
     }
+
+    if (clueString.indexOf("_") < 0) {
+            alert("Congratulations! You guessed the word!");
+            newGame();
+        }
+
 };
 
 
