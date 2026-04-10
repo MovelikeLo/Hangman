@@ -45,6 +45,10 @@ let guessLetter = function() {
         guessCount--;
     }
     letter = letter.toLowerCase();
+    if (guesses.indexOf(letter) >= 0) {
+        alert("You already guessed that letter!");
+        return;
+    }
     guesses+=letter;
     input.value = ""; // Clear the input box
     updatePage();
